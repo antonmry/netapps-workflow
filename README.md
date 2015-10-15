@@ -13,7 +13,7 @@ git clone https://waffle.io/antonmry/netapps-workflow
 
 ```sh
 git checkout -b gradle-test#11
-git push --set-upstream origin gradle-test#11
+git push -u origin gradle-test#11
 ```
 
 It moves the issue to the column "In Progress" and assign the task to your user. 

@@ -1,7 +1,7 @@
-[![Stories in Ready](https://badge.waffle.io/antonmry/netapps-workflow.png?label=ready&title=Ready)](https://waffle.io/antonmry/netapps-workflow)
+[![Stories in Ready](https://badge.waffle.io/antonmry/netapps-workflow.png?label=ready&title=Ready)](https://waffle.io/antonmry/netapps-workflow) [![Join the chat at https://gitter.im/antonmry/netapps-workflow](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/antonmry/netapps-workflow?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 # netapps-workflow
 
-[![Join the chat at https://gitter.im/antonmry/netapps-workflow](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/antonmry/netapps-workflow?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Basic repository to explain how we work with github and waffle
 
 * Go to [Waffle](https://waffle.io/antonmry/netapps-workflow) and choose an issue in the Ready column (weekly sprint)

@@ -1,0 +1,49 @@
+buildscript {
+    repositories {
+        maven { url "file://${projectDir}/libs" }
+
+        if( project.hasProperty('internalArtifactRepository') ){
+            maven { url project.internalArtifactRepository }
+        } else {
+            maven { url 'https://plugins.gradle.org/m2/' }
+            mavenCentral()
+        }
+    }
+
+    dependencies {
+        classpath 'gradle.plugin.com.lv.plugins:gradle-weblogic-plugin:0.4'
+    }
+}
+
+apply plugin: 'war'
+apply plugin: 'com.lv.weblogic'
+
+repositories {
+    if( project.hasProperty('internalArtifactRepository') ){
+        maven { url project.internalArtifactRepository }
+    } else {
+        mavenCentral()
+    }
+}
+
+dependencies {
+    compile group: 'commons-io', name: 'commons-io', version: '1.4'
+    compile group: 'log4j', name: 'log4j', version: '1.2.15', ext: 'jar'
+
+    weblogic files("${projectDir}/libs/wlfullclient-1036.jar")
+}
+
+ext.archiveFile = war.archivePath
+
+weblogic {
+    adminurl = 't3://localhost:7001'
+    user = 'weblogic'
+    password = 'welcome1'
+    source = archiveFile
+    deploymentName = project.name
+    targets = 'AdminServer'
+    debug = true
+    verbose = true
+    remote = true
+    upload = true
+}

@@ -6,6 +6,7 @@ buildscript {
             maven { url project.internalArtifactRepository }
         } else {
             maven { url 'https://plugins.gradle.org/m2/' }
+            maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' } //spock
             mavenCentral()
         }
     }
@@ -17,6 +18,8 @@ buildscript {
 
 apply plugin: 'war'
 apply plugin: 'com.lv.weblogic'
+apply plugin: 'groovy'
+
 
 repositories {
     if( project.hasProperty('internalArtifactRepository') ){
@@ -31,6 +34,11 @@ dependencies {
     compile group: 'log4j', name: 'log4j', version: '1.2.15', ext: 'jar'
 
     weblogic files("${projectDir}/libs/wlfullclient-1036.jar")
+
+    // Spock
+    compile "org.codehaus.groovy:groovy-all:2.4.1"
+    testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
+
 }
 
 ext.archiveFile = war.archivePath

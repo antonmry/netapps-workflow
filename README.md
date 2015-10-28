@@ -1,4 +1,4 @@
-[![Stories in Ready](https://badge.waffle.io/antonmry/netapps-workflow.png?label=ready&title=Ready)](https://waffle.io/antonmry/netapps-workflow) [![Join the chat at https://gitter.im/antonmry/netapps-workflow](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/antonmry/netapps-workflow?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Stories in Ready](https://badge.waffle.io/antonmry/netapps-workflow.png?label=ready&title=Ready)](https://waffle.io/antonmry/netapps-workflow) [![Build Status](http://jenkins.serviceandnetworkevolution.com:8080/buildStatus/icon?job=netapps-workflow&style=plastic)](http://jenkins.serviceandnetworkevolution.com:8080/job/netapps-workflow/) [![Join the chat at https://gitter.im/antonmry/netapps-workflow](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/antonmry/netapps-workflow?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 # netapps-workflow
 

@@ -10,6 +10,6 @@ class TestingUnitSpec extends spock.lang.Specification {
         def greeter = new Greeter();
 
         expect: "Adding two numbers to return the sum"
-        greeter.getGreeting().equals("hello Gradle 2")
+        greeter.getGreeting().equals("hello Gradle")
     }
 }

@@ -26,7 +26,6 @@ repositories {
         maven { url project.internalArtifactRepository }
     } else {
         mavenCentral()
-        maven { url 'http://repo.jenkins-ci.org/public/' }
     }
 }
 
@@ -39,8 +38,6 @@ dependencies {
     // Spock
     compile "org.codehaus.groovy:groovy-all:2.4.1"
     testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
-    testCompile "org.imaginea.jenkins.plugins:testInProgress-spock-client:0.1"
-
 }
 
 ext.archiveFile = war.archivePath

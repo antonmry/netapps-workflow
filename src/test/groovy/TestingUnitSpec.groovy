@@ -4,8 +4,7 @@
  */
 import org.gradle.sample.Greeter;
 
-//Test Lucia
-//Segunda prueba
+//Testing Jenkins
 
 class TestingUnitSpec extends spock.lang.Specification {
     def "testingUnit-greeter"() {

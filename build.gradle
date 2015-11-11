@@ -20,6 +20,7 @@ apply plugin: 'war'
 apply plugin: 'com.lv.weblogic'
 apply plugin: 'groovy'
 apply plugin: 'jacoco'
+apply plugin: 'checkstyle'
 
 
 repositories {
@@ -108,3 +109,19 @@ jacocoTestReport {
         })
     }
 }
+
+// Checkstyle configuration
+
+checkstyle {
+    //configFile file('downloaded_google_checks.xml') // https://github.com/checkstyle/checkstyle/blob/checkstyle-6.9/src/main/resources/google_checks.xml
+    toolVersion '6.9'    // Be sure checkstyle.xml corresponds to this version
+    showViolations=false
+}
+
+task checkstyleHtml << {
+    ant.xslt(in: checkstyleMain.reports.xml.destination,
+            style: file('config/checkstyle/checkstyle-noframes-sorted.xsl'),
+            out: new File(checkstyleMain.reports.xml.destination.parent, 'main.html'))
+}
+
+checkstyleMain.finalizedBy checkstyleHtml
